@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:clipChildren="false"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:gravity="top">
+
+        <VideoView
+            android:scrollbars="none"
+            android:clickable="false"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:fitsSystemWindows="true"
+            android:id="@+id/videoView"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            />
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:src="@drawable/gymlish_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="false"
+            android:layout_marginTop="65dp"
+            android:id="@+id/imageView" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textContainer"
+            android:layout_below="@+id/imageView">
+        <EditText
+            android:id="@+id/pseudo"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Nom d'utilisateur"
+            android:singleLine="true"
+            android:lines="1"
+            android:layout_marginTop="118dp"
+            android:layout_centerHorizontal="true"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white">
+        </EditText>
+        <EditText
+            android:id="@+id/mdp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Mot de passe"
+            android:layout_marginTop="35dp"
+            android:layout_below="@+id/pseudo"
+            android:layout_centerHorizontal="true"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white">
+        </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:id = "@+id/buttonSection"
+            android:background="@drawable/border_set"
+            android:paddingBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="S'inscrire"
+                android:id="@+id/signUp"
+                android:background="@color/red"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="66dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="Se connecter"
+                android:id="@+id/login"
+                android:layout_marginEnd="66dp"
+                android:layout_alignTop="@+id/signUp"
+                android:background="@color/red"
+                android:textColor="@android:color/white"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
